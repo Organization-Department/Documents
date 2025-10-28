@@ -1,0 +1,64 @@
+site_name: BUAA CS 组织部文档中心
+site_description: 北京航空航天大学计算机学院组织部材料仓库
+
+# 使用现代化的 material 主题
+theme:
+  name: material
+  # custom_dir: overrides
+  language: 'zh'
+  features:
+    - navigation.tabs
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      primary: blue
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: 暗色模式
+    - media: "(prefers-color-scheme: dark)"
+      primary: blue
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: 亮色模式
+
+
+# 定义导航菜单
+nav:
+  - "部门介绍":
+    - "组织架构": "introduction/organization.md"
+    - "工作制度": "introduction/rules.md"
+  - "工作日志":
+    - "向党推优": "logs/recommendations.md"
+    - "新团员发展": "logs/new_members.md"
+    - "升旗仪式": "logs/flag_raising.md"
+
+# 定义首页
+pages:
+
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML
+  - javascripts/katex.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - javascripts/tablesort.js
+
+extra_css:
+  - https://unpkg.com/katex@0/dist/katex.min.css
+
+
+
+# 插件
+plugins:
+  - search
+
+markdown_extensions:
+  - pymdownx.tilde
+  - pymdownx.arithmatex:
+      generic: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - tables
