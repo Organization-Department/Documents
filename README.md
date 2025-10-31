@@ -23,7 +23,7 @@ git checkout -b your-branch-name
 ```bash
 git add docs/your-file.md
 git commit -m "添加/更新: 文件说明"
-git push
+git push -u origin your-branch-name
 ```
 
 ### 步骤 4：提交 PR
